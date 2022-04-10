@@ -5,6 +5,7 @@ const fs = require('fs')
 const promptUser = () => {
     return inquirer.prompt(
         [
+            //title
             {
                 type: 'input',
                 message: "Whats the project title?",
@@ -19,6 +20,7 @@ const promptUser = () => {
                     
                 },
             },
+            //installation how to
             {
                 type: 'input',
                 message: "How do you install your application",
@@ -32,6 +34,7 @@ const promptUser = () => {
                     } 
                 }
             },
+            //instructions on how to run
             {
                 type: 'input',
                 message: "any special instructions",
@@ -45,45 +48,62 @@ const promptUser = () => {
                     } 
                 }
             },
+            //credits
             {
                 type: 'input',
-                message: "How do you install your application",
+                message: "Any credits",
                 name: 'installation',
                 validate: nameInput => {
                     if (nameInput) {
                         return true;
                     }   else {
-                        console.log ('Please enter your installation process!');
+                        console.log ('Please enter any credits!');
                         return false;
                     } 
                 }
             },
+            //usage
             {
                 type: 'input',
-                message: "How do you install your application",
-                name: 'installation',
+                message: "How do you use your app",
+                name: 'usage',
                 validate: nameInput => {
                     if (nameInput) {
                         return true;
                     }   else {
-                        console.log ('Please enter your installation process!');
+                        console.log ('Please enter your usage!');
+                        return false;
+                    }
+                } 
+            },
+            //license
+            {
+                type: 'input',
+                message: "license used",
+                name: 'license',
+                validate: nameInput => {
+                    if (nameInput) {
+                        return true;
+                    }   else {
+                        console.log ('Please enter your license used!');
                         return false;
                     }
                 } 
             },
             {
                 type: 'input',
-                message: "How do you install your application",
-                name: 'installation',
+                message: "GitHub username:",
+                name: 'git',
                 validate: nameInput => {
                     if (nameInput) {
                         return true;
                     }   else {
-                        console.log ('Please enter your installation process!');
+                        console.log ('Please enter your GitHub username!');
                         return false;
                     }
                 } 
-            }
+            },
+            
         ]);
 };
 
