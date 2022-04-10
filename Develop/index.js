@@ -7,8 +7,8 @@ const promptUser = () => {
         [
             {
                 type: 'input',
-                message ="Whats the project title?",
-                name: 'title';
+                message: "Whats the project title?",
+                name: 'title',
                 vlaidate: nameInput => {
                     if (nameInput) {
                         return true;
