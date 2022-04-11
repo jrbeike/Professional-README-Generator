@@ -121,14 +121,20 @@ const promptUser = () => {
         * [Contribution](#contribution)
         * [Credits](#credits)
         * [License](#license)
-        # Installation
+        ## Installation
         ${installation}
+        ## Usage
         ${usage}
+        ## Contribution
         ${contribution}
+        ## Instructions
         ${instructions}
+        ## Credits
         ${credit}
+        ## License
         ${license}
-        ${git}
+        # Contact
+        * GitHub${git}
         `
 
         })
