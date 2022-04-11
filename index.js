@@ -116,6 +116,12 @@ const promptUser = () => {
             contribution
         }) =>{
         const template =`# ${title}
+        * [Installation](#installation)
+        * [Usage](#usage)
+        * [Contribution](#contribution)
+        * [Credits](#credits)
+        * [License](#license)
+        # Installation
         ${installation}
         ${usage}
         ${contribution}
