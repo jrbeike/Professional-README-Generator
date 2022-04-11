@@ -19,5 +19,7 @@
   "bugs": {
     "url": "https://github.com/jrbeike/Professional-README-Generator/issues"
   },
-  "homepage": "https://github.com/jrbeike/Professional-README-Generator#readme"
+  "homepage": "https://github.com/jrbeike/Professional-README-Generator#readme",
+  "keywords": [],
+  "devDependencies": {}
 }

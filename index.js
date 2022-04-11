@@ -3,8 +3,7 @@ const inquirer = require('inquirer');
 const fs = require('fs')  
 // TODO: Create an array of questions for user input
 const promptUser = () => {
-    return inquirer.prompt(
-        [
+    return inquirer.prompt([
             //title
             {
                 type: 'input',
@@ -104,7 +103,7 @@ const promptUser = () => {
                 } 
             },
 
-        ])
+        ]);
         .then(({
             title,
             installation,
@@ -137,11 +136,13 @@ const promptUser = () => {
         * GitHub${git}
         `
         // TODO: Create a function to write README file
-        createNewfile(title,template);
+        promptUser()
+            .then(p)
+        createNewFile(title,template);
         }
         );
         function createNewFile(fileName,data){
-        fs.writeFile(`./${fileName.toLowerCase().split('').join('')}.md`, data, err =>{
+        fs.writeFile(`./${fileName.toLowerCase().split('').join('')}.md`, data, (err) =>{
             if(err) {
                 console.log(err)
             }
