@@ -103,8 +103,29 @@ const promptUser = () => {
                     }
                 } 
             },
-            
-        ]);
+
+        ])
+        .then(({
+            title,
+            installation,
+            instructions, 
+            credit,
+            license,
+            git,
+            usage,
+            contribution
+        }) =>{
+        const template =`# ${title}
+        ${installation}
+        ${usage}
+        ${contribution}
+        ${instructions}
+        ${credit}
+        ${license}
+        ${git}
+        `
+
+        })
 };
 
 // TODO: Create a function to write README file
